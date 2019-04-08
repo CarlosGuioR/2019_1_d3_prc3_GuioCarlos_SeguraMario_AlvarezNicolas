@@ -1,0 +1,1 @@
+En este adelanto se presenta el funcionamiento de las primeras tres funciones solicitadas en el laboratorio, la primera consiste en encontrar el promedio de un vector, la segunda encuentra la desviacion estandar de un vertor, se encuentran los archivos Main.cpp como principal, Funciones.cpp como hoja de metodos, y Funciones.h incluyendo las librerias necesarias.
