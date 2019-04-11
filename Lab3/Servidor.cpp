@@ -175,7 +175,7 @@ void *hilo_cliente(void *param){
 				read(fd, numero, sizeof(int));
 				printf("[Cliente %d] Tamaño del vector: %d\n",numhilo,numero[0]);
 				cantidad=numero[0];
-
+				double resultado[1],matriz[1];
 				
 				float valor=0, valor1=0;
 				printf("[Cliente %d]Vector:\n",numhilo);
@@ -188,7 +188,7 @@ void *hilo_cliente(void *param){
 				close(fd);
 				resultado[0]=valor/double(cantidad);
 
-				printf("[Cliente %d]Promedio: %f\n",numhilo,resultado);
+				printf("[Cliente %d]Promedio: %f\n",numhilo,resultado[0]);
 
 				fd = open(myfifo, O_WRONLY);//leer opcion
 				write(fd, resultado, sizeof(double));
