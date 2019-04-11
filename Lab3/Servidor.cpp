@@ -158,7 +158,7 @@ void *hilo_cliente(void *param){
 		while(true){
 
 			while(true){
-						  
+				opcion=0;		  
 				fd = open(myfifo, O_RDONLY);//leer opcion
 				read(fd, numero, sizeof(int));
 				opcion=numero[0];
@@ -224,6 +224,7 @@ void *hilo_cliente(void *param){
 				printf("[Cliente %d]Desviacion estandar: %f \n",numhilo,desviacion[0]);
 
 				fd = open(myfifo, O_WRONLY);//leer opcion
+				write(fd, desviacion, sizeof(double));
 				write(fd, desviacion, sizeof(double));
 				close(fd);
 
